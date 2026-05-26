@@ -2,9 +2,45 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>My First Website</title>
+    <title>🏠 Family Assistant 家庭助手</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; background: #f0f4f8; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h2 { text-align: center; color: #0288d1; margin-top: 0; font-size: 24px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 14px; }
+        #submit-btn { width: 100%; padding: 12px; font-size: 16px; cursor: pointer; background: #0288d1; color: white; border: none; border-radius: 6px; font-weight: bold; transition: background 0.2s; }
+        #submit-btn:hover { background: #01579b; }
+        hr { margin: 30px 0; border: 0; border-top: 1px solid #e0e0e0; }
+        h3 { color: #0288d1; margin-bottom: 15px; font-size: 18px; }
+        .todo-list { list-style: none; padding: 0; margin: 0; }
+        .todo-item { position: relative; background: #f9f9f9; padding: 15px; margin-bottom: 10px; border-left: 5px solid #0288d1; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .todo-item h4 { margin: 0 0 5px 0; color: #111; font-size: 16px; padding-right: 50px; }
+        .todo-item p { margin: 0 0 10px 0; color: #666; font-size: 14px; white-space: pre-wrap; }
+        .delete-btn { position: absolute; top: 12px; right: 15px; background: #ff5252; color: white; border: none; padding: 5px 10px; border-radius: 4px; font-size: 12px; cursor: pointer; }
+    </style>
 </head>
 <body>
-    <h1>Hello, My Name is Yuebin! This is my first website.</h1>
+
+<div class="container">
+    <h2>🏠 Family Assistant 家庭助手</h2>
+
+    <div class="form-group">
+        <label>📅 事项名称</label>
+        <input type="text" id="todo-title" placeholder="例如：买生鲜牛奶、修理客房网络...">
+    </div>
+    <div class="form-group">
+        <label>📝 备注详情</label>
+        <textarea id="todo-desc" rows="3" placeholder="请输入具体要求或备忘细节..."></textarea>
+    </div>
+    <button id="submit-btn">添加事项</button>
+
+    <hr>
+    <h3>📌 当前清单</h3>
+    <div id="todo-list" class="todo-list">
+        </div>
+</div>
+
 </body>
 </html>
